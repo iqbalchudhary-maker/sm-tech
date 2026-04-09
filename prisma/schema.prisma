@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  DEVELOPER
+}
+
+enum ProjectStatus {
+  DRAFT
+  ACTIVE
+  COMPLETED
+  ARCHIVED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  passwordHash  String
+  role          UserRole  @default(DEVELOPER)
+  bio           String?
+  avatarUrl     String?
+  // Professional Links for Team Section
+  githubUrl     String?
+  linkedinUrl   String?
+  portfolioUrl  String?
+  isActive      Boolean   @default(true)
+  projects      Project[] @relation("OwnerProjects")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Project {
+  id            String        @id @default(cuid())
+  title         String
+  slug          String        @unique
+  summary       String
+  content       String?
+  liveUrl       String?
+  repoUrl       String?
+  coverImageUrl String?
+  category      String?       @default("AI Automation") // e.g., CRM, ERP, AI Agent
+  status        ProjectStatus @default(DRAFT)
+  featured      Boolean       @default(false)
+  ownerId       String
+  owner         User          @relation("OwnerProjects", fields: [ownerId], references: [id], onDelete: Cascade)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@index([ownerId, status])
+}
+
+// --- NEW MODEL FOR AI AGENT LEADS ---
+model Lead {
+  id            String   @id @default(cuid())
+  name          String?
+  email         String?
+  phone         String?
+  query         String   // Full chat summary or specific requirement
+  source        String   @default("AI_AGENT") // To track where lead came from
+  isNotified    Boolean  @default(false)      // To check if WhatsApp alert was sent
+  createdAt     DateTime @default(now())
+}
+
+// --- NEW MODEL FOR TESTIMONIALS ---
+model Testimonial {
+  id          String   @id @default(cuid())
+  clientName  String
+  designation String?  // e.g., CEO of X Company
+  content     String
+  rating      Int      @default(5)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}

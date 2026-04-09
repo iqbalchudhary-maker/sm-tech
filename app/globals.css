@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #020617;
+  color: #e2e8f0;
+  scroll-behavior: smooth;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 md:px-8;
+}
