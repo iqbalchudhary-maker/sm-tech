@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Linkedin, Star, Target, Rocket, Mail, Phone, ChevronDown, Shield } from "lucide-react";
+import { Star, Target, Rocket, ChevronDown, Shield } from "lucide-react";
 import type { ProjectCard } from "@/lib/site-data";
 import { managementTeam, faqs, professionalTestimonials } from "@/lib/data";
 import { useState } from "react";
@@ -112,12 +112,12 @@ export function WhyChooseUs() {
 
 export function Management() {
   return (
-    <section id="management" className="section-shell py-20 bg-transparent">
+    <section id="management" className="section-shell py-20 bg-slate-50">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
-          Management <span className="text-neonBlue">Team</span>
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase">
+          Management <span className="text-blue-600">Team</span>
         </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
+        <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
           Expert minds leading our global AI Automation and Digital Transformation initiatives.
         </p>
       </div>
@@ -130,44 +130,33 @@ export function Management() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative flex flex-col h-full rounded-[3rem] border border-white/10 bg-white/5 p-8 hover:border-neonBlue/40 transition-all duration-500 overflow-hidden"
+            className="group relative flex flex-col h-full rounded-[3rem] border border-slate-200 bg-white p-8 hover:border-blue-300 hover:shadow-premium transition-all duration-500 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-neonBlue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             
-            <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl mb-8">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-xl mb-8">
               <Image
-                src={member.photo}
+                src={member.photo || "/images/placeholder.png"}
                 alt={member.name}
                 fill
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
               />
             </div>
 
-            <div className="relative flex flex-col flex-grow">
-              <span className="text-xs uppercase tracking-[0.3em] text-neonBlue font-bold mb-2">{member.role}</span>
-              <h3 className="text-2xl font-bold text-white mb-4">{member.name}</h3>
+            <div className="relative flex flex-col flex-grow text-center">
+              <span className="text-xs uppercase tracking-[0.3em] text-blue-600 font-bold mb-2">{member.role}</span>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">{member.name}</h3>
               
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3 text-slate-400 text-sm hover:text-white transition-colors">
-                  <Phone size={16} className="text-neonBlue" />
-                  <span>{member.contact}</span>
-                </div>
-                <div className="flex items-center gap-3 text-slate-400 text-sm hover:text-white transition-colors">
-                  <Mail size={16} className="text-neonBlue" />
-                  <span>{member.email}</span>
-                </div>
+              <div className="bg-blue-50/50 p-4 rounded-2xl border border-blue-100 mb-6">
+                <p className="text-sm text-slate-700 leading-relaxed font-medium">
+                  &ldquo;{member.message}&rdquo;
+                </p>
               </div>
 
-              <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
-                <p className="text-xs text-slate-400 italic max-w-[70%]">{member.bio}</p>
-                <a 
-                  href={member.linkedin} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-neonBlue hover:text-slateDeep transition-all"
-                >
-                  <Linkedin size={18} />
-                </a>
+              <div className="mt-auto pt-6 border-t border-slate-100">
+                <p className="text-xs text-slate-500 italic">
+                  {member.bio}
+                </p>
               </div>
             </div>
           </motion.div>

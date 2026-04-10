@@ -22,58 +22,46 @@ export const heroSlides = [
 
 export const managementTeam = [
   {
-    name: "Tanvir Hussain Chatcha",
+    name: "Tanvir Hussain Chatha",
     role: "Director (UAE)",
     photo: "/images/tanvir.jpeg",
-    contact: "+971 XXX XXX XXXX",
-    email: "tanvir@sm-tech.com",
-    linkedin: "https://linkedin.com/in/tanvir",
-    bio: "AI Automation Strategist leading our international operations in Dubai."
+    bio: "AI Automation Strategist leading our international operations in Dubai.",
+    message: "I focus on scaling international sales and managing business growth for our global clients through expert AI automation."
   },
   {
     name: "Ghulam Abbas Bhatti",
     role: "Director (Pakistan)",
     photo: "/images/abbass.png",
-    contact: "+92 300 1234567",
-    email: "abbas@sm-tech.com",
-    linkedin: "https://linkedin.com/in/abbas",
-    bio: "Principal AI Architect & Full Stack Expert driving innovation in Pakistan."
+    bio: "Principal AI Architect & Full Stack Expert driving innovation in Pakistan.",
+    message: "My goal is to build intelligent AI systems that directly increase sales and efficiently manage complex business operations."
   },
   {
     name: "Professional Executive",
     role: "CEO",
     photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
-    contact: "+92 300 0000000",
-    email: "ceo@sm-tech.com",
-    linkedin: "https://linkedin.com/in/ceo",
-    bio: "Strategic leader focused on customer success and global expansion."
+    bio: "Strategic leader focused on customer success and global expansion.",
+    message: "I lead our strategic initiatives to ensure SM Technology delivers AI solutions that maximize customer sales and business success."
   },
   {
     name: "Technical Expert",
     role: "Technical Director",
     photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
-    contact: "+92 300 1111111",
-    email: "tech@sm-tech.com",
-    linkedin: "https://linkedin.com/in/tech-director",
-    bio: "Leading our engineering team in building complex AI architectures."
+    bio: "Leading our engineering team in building complex AI architectures.",
+    message: "I oversee the technical development of AI tools designed to automate sales processes and manage business workflows seamlessly."
   },
   {
     name: "Finance Lead",
     role: "Finance Director",
     photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
-    contact: "+92 300 2222222",
-    email: "finance@sm-tech.com",
-    linkedin: "https://linkedin.com/in/finance",
-    bio: "Managing financial operations and strategic investments for growth."
+    bio: "Managing financial operations and strategic investments for growth.",
+    message: "I manage the financial architecture that supports our AI innovations, ensuring sustainable business growth for all our partners."
   },
   {
     name: "HR Manager",
     role: "HR Manager",
     photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-    contact: "+92 300 3333333",
-    email: "hr@sm-tech.com",
-    linkedin: "https://linkedin.com/in/hr",
-    bio: "Fostering a culture of excellence and talent acquisition for AI innovation."
+    bio: "Fostering a culture of excellence and talent acquisition for AI innovation.",
+    message: "I recruit and develop the top talent needed to manage our customers' business needs and drive their sales through AI."
   }
 ];
 
@@ -119,3 +107,46 @@ export const professionalTestimonials = [
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
   }
 ];
+
+export const seoFriendlyMessages = {
+  managementTeam: {
+    tanvir: {
+      heading: "AI Automation Strategist Dubai | Enterprise Digital Transformation UAE",
+      message: "Tanvir Hussain Chatha leads our AI automation initiatives across UAE markets, specializing in enterprise digital transformation solutions that drive measurable business outcomes."
+    },
+    ghulam: {
+      heading: "Principal AI Architect Pakistan | Full Stack Development Expert",
+      message: "Ghulam Abbas Bhatti pioneers innovative AI architectures and full-stack solutions, delivering cutting-edge technology implementations for global enterprises."
+    },
+    ceo: {
+      heading: "Strategic Technology Leadership | Global AI Solutions CEO",
+      message: "Our Chief Executive Officer drives strategic vision for scalable AI solutions, focusing on customer success and sustainable business growth across international markets."
+    },
+    technical: {
+      heading: "Technical Director AI Engineering | Complex System Architecture",
+      message: "Technical Director oversees enterprise-grade AI system development, ensuring robust, scalable architectures that power modern digital transformation initiatives."
+    },
+    finance: {
+      heading: "Finance Director Technology Investments | AI Business Growth",
+      message: "Finance Director manages strategic technology investments and financial operations, enabling sustainable growth for AI-driven business solutions."
+    },
+    hr: {
+      heading: "HR Manager Talent Acquisition | AI Innovation Culture",
+      message: "HR Manager builds exceptional teams focused on AI innovation, fostering a culture of excellence that attracts top technology talent globally."
+    }
+  }
+};
+
+export const lightThemeColors = {
+  primary: "#3B82F6",
+  secondary: "#8B5CF6",
+  accent: "#06B6D4",
+  background: "#F8FAFC",
+  surface: "#FFFFFF",
+  text: "#1E293B",
+  textSecondary: "#64748B",
+  border: "#E2E8F0",
+  success: "#10B981",
+  warning: "#F59E0B",
+  error: "#EF4444"
+};
