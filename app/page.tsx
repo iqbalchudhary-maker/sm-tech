@@ -1,22 +1,23 @@
 import { Footer } from "@/components/landing/Footer";
 import { Hero } from "@/components/landing/Hero";
 import { Navbar } from "@/components/landing/Navbar";
-import { CompletedProjects, Management, MissionVision, Services, Team, Testimonials } from "@/components/landing/Sections";
+import { AboutUs, CompletedProjects, FAQSection, Management, Services, Testimonials, WhyChooseUs } from "@/components/landing/Sections";
 import { StealthChatWidget } from "@/components/chat/StealthChatWidget";
-import { getProjectsForLanding, getTeamForLanding } from "@/lib/site-data";
+import { getProjectsForLanding } from "@/lib/site-data";
 
 export default async function HomePage() {
-  const [projects, team] = await Promise.all([getProjectsForLanding(), getTeamForLanding()]);
+  const [projects] = await Promise.all([getProjectsForLanding()]);
 
   return (
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <MissionVision />
+      <AboutUs />
+      <WhyChooseUs />
       <Management />
       <Services />
       <CompletedProjects projects={projects} />
-      <Team team={team} />
+      <FAQSection />
       <Testimonials />
       <Footer />
       <StealthChatWidget />

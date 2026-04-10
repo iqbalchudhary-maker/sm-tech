@@ -1,14 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink, Github, Linkedin, Star, Target, Rocket, Quote } from "lucide-react";
-import type { ProjectCard, TeamCard } from "@/lib/site-data";
+import { Linkedin, Star, Target, Rocket, Mail, Phone, ChevronDown, Shield } from "lucide-react";
+import type { ProjectCard } from "@/lib/site-data";
+import { managementTeam, faqs, professionalTestimonials } from "@/lib/data";
+import { useState } from "react";
 
 // --- Types ---
-type TeamProps = {
-  team: TeamCard[];
-};
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -17,122 +16,256 @@ const fadeIn = {
   transition: { duration: 0.5 }
 };
 
-export function MissionVision() {
+export function AboutUs() {
   return (
-    <section className="section-shell grid gap-8 pb-10 md:grid-cols-2 relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-neonBlue/5 blur-[120px] pointer-events-none" />
-  
-      <motion.article 
-        {...fadeIn} 
-        className="group relative rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-10 backdrop-blur-2xl transition-all duration-500 hover:border-neonBlue/40 hover:shadow-[0_0_50px_-12px_rgba(0,243,255,0.3)]"
-      >
-        <div className="flex items-center gap-4 mb-6">
-          <div className="h-12 w-12 rounded-xl bg-neonBlue/10 flex items-center justify-center border border-neonBlue/20">
-            <Target className="text-neonBlue" size={24} />
+    <section id="about" className="section-shell py-20 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neonBlue/5 blur-[120px] pointer-events-none" />
+      
+      <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <motion.div {...fadeIn}>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+            About <span className="text-neonBlue">SM Technology</span>
+          </h2>
+          <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+            <p>
+              SM Technology is a premier <span className="text-white font-bold">AI Automation Company</span> and <span className="text-white font-bold">Web Development</span> firm dedicated to driving <span className="text-neonBlue font-bold">Digital Transformation</span> for businesses globally. We specialize in architecting <span className="text-white font-bold">Enterprise AI Solutions</span> and <span className="text-white font-bold">Custom SaaS</span> products that redefine operational efficiency.
+            </p>
+            <p>
+              Our journey is rooted in professional excellence and legal compliance. <span className="text-neonBlue font-semibold italic">Registration No. 2747, Registered on 3 December 2019, according to Partnership Act 1932.</span> This foundation allows us to provide high-trust engineering and reliable automation services to our international clientele.
+            </p>
+            <p>
+              Whether it&apos;s building autonomous reasoning agents or scaling omnichannel AI bots, our mission is to empower enterprises with resilient technology that eliminates repetitive manual tasks, allowing human talent to focus on high-impact growth.
+            </p>
           </div>
-          <h2 className="text-3xl font-bold text-white tracking-tight">Our <span className="text-neonBlue">Mission</span></h2>
-        </div>
-        
-        <p className="text-lg leading-relaxed text-slate-300">
-          Our mission is to empower enterprises with <span className="text-white font-semibold">Resilient AI Systems</span> that eliminate repetitive manual tasks, allowing your team to focus on high-impact growth. We deliver automation with a focus on <span className="text-neonBlue font-bold">Measurable ROI</span> and high-trust engineering.
-        </p>
-        
-        <div className="mt-8 flex items-center gap-2 text-sm text-neonBlue font-medium">
-          <div className="h-1 w-12 bg-neonBlue/30 rounded-full" />
-          Scaling your success through intelligence.
-        </div>
-      </motion.article>
-  
-      <motion.article 
-        {...fadeIn} 
-        className="group relative rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-10 backdrop-blur-2xl transition-all duration-500 hover:border-purple-500/40 hover:shadow-[0_0_50px_-12px_rgba(168,85,247,0.3)]"
-      >
-        <div className="flex items-center gap-4 mb-6">
-          <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
-            <Rocket className="text-purple-400" size={24} />
+        </motion.div>
+
+        <motion.div 
+          {...fadeIn}
+          className="relative aspect-square rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-3xl overflow-hidden p-8"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neonBlue/20 to-transparent" />
+          <div className="relative h-full flex flex-col justify-center items-center text-center space-y-8">
+            <div className="h-24 w-24 rounded-3xl bg-neonBlue/10 flex items-center justify-center border border-neonBlue/20">
+              <Shield className="text-neonBlue w-12 h-12" />
+            </div>
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-2">Registered & Trusted</h3>
+              <p className="text-slate-400">Operating under the Partnership Act 1932 since 2019, delivering quality and security in every line of code.</p>
+            </div>
+            <div className="grid grid-cols-2 gap-4 w-full">
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="text-2xl font-black text-neonBlue">5+ Years</div>
+                <div className="text-xs text-slate-400 uppercase tracking-widest">Experience</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
+                <div className="text-2xl font-black text-neonBlue">100+</div>
+                <div className="text-xs text-slate-400 uppercase tracking-widest">Global Projects</div>
+              </div>
+            </div>
           </div>
-          <h2 className="text-3xl font-bold text-white tracking-tight">Our <span className="text-purple-400">Vision</span></h2>
-        </div>
-  
-        <p className="text-lg leading-relaxed text-slate-300">
-          We envision a global digital ecosystem where every business operates on <span className="text-white font-semibold">Autonomous Intelligence</span>. Our goal is to provide secure, adaptive technology that manages your operations <span className="text-purple-400 font-bold">24/7</span>, ensuring seamless continuity and innovation.
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export function WhyChooseUs() {
+  const reasons = [
+    { title: "100% Customer Satisfaction", desc: "Our commitment to excellence ensures every client receives a solution that exceeds expectations.", icon: Star },
+    { title: "Global Project Expertise", desc: "Successfully delivered 100+ high-impact projects across UAE, Pakistan, and international markets.", icon: Target },
+    { title: "Enterprise-Grade Security", desc: "We build private, secure AI systems with end-to-end encryption for your sensitive business data.", icon: Shield },
+    { title: "High-Performance Engineering", desc: "Scalable Custom SaaS and AI architectures optimized for speed and reliability.", icon: Rocket },
+  ];
+
+  return (
+    <section className="section-shell py-20 bg-slateDeep/30 relative">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter">
+          Why <span className="text-neonBlue">Choose</span> Us?
+        </h2>
+        <p className="mt-4 text-slate-400 max-w-2xl mx-auto italic">
+          Delivering 100% Customer Satisfaction through intelligent, scalable, and secure technology.
         </p>
-  
-        <div className="mt-8 flex items-center gap-2 text-sm text-purple-400 font-medium">
-          <div className="h-1 w-12 bg-purple-500/30 rounded-full" />
-          Building the future of digital workforce.
-        </div>
-      </motion.article>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {reasons.map((item, index) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="group p-8 rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-xl hover:border-neonBlue/40 transition-all duration-500"
+          >
+            <div className="h-14 w-14 rounded-2xl bg-neonBlue/10 flex items-center justify-center border border-neonBlue/20 mb-6 group-hover:scale-110 transition-transform">
+              <item.icon className="text-neonBlue w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }
 
 export function Management() {
-  const leaders = [
-    {
-      role: "Director (UAE)",
-      name: "Tanvir Hussain Chatcha",
-      title: "AI Automation Strategist",
-      message: "Dedicated to scaling UAE businesses through secure, autonomous AI ecosystems. My mission is to drive 10x operational efficiency and maximize ROI for our partners by deploying high-trust automation that works 24/7.",
-      image: "/images/tanvir.jpeg",
-      imagePosition: "center 20%"
-    },
-    {
-      role: "Director (Pakistan)",
-      name: "Ghulam Abbas Bhatti",
-      title: "Principal AI Architect & Full Stack Expert",
-      message: "Building the future of automation in Pakistan by transforming complex manual workflows into seamless AI-driven growth engines. We don't just write code; we build intelligent systems that increase your sales and slash overhead costs.",
-      image: "/images/abbass.png",
-      imagePosition: "center 25%"
-    },
-    {
-      role: "CEO & Growth Lead",
-      name: "Professional Executive",
-      title: "Strategic Innovation & Customer Success",
-      message: "Ensuring customer satisfaction is at the heart of SM Technology. We specialize in modernizing business flows with ethical AI, making sure every automation we build results in measurable success and sustainable international growth.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
-      imagePosition: "center 15%"
-    }
-  ];
-
   return (
-    <section id="management" className="section-shell py-10 bg-slateDeep/30">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-          Our <span className="text-neonBlue">Leadership</span> Team
+    <section id="management" className="section-shell py-20 bg-transparent">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+          Management <span className="text-neonBlue">Team</span>
         </h2>
         <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-          Expert minds dedicated to building the next generation of AI agents that empower your business to scale globally.
+          Expert minds leading our global AI Automation and Digital Transformation initiatives.
         </p>
       </div>
 
-      <div className="mt-8 grid gap-8 md:grid-cols-3">
-        {leaders.map((leader) => (
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {managementTeam.map((member, index) => (
           <motion.div 
-            key={leader.name} 
+            key={member.name} 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col h-full rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-6 hover:border-neonBlue/40 transition-all duration-500 group"
+            className="group relative flex flex-col h-full rounded-[3rem] border border-white/10 bg-white/5 p-8 hover:border-neonBlue/40 transition-all duration-500 overflow-hidden"
           >
-            <div className="aspect-square w-full overflow-hidden rounded-[1.5rem] border border-white/20 bg-slate-900 shadow-2xl relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-neonBlue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            
+            <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl mb-8">
               <Image
-                src={leader.image}
-                alt={leader.name}
+                src={member.photo}
+                alt={member.name}
                 fill
-                className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                style={{ objectPosition: leader.imagePosition }}
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
               />
             </div>
 
-            <div className="mt-6 flex flex-col flex-grow">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-neonBlue font-bold">{leader.role}</span>
-              <h3 className="mt-1 text-xl font-bold text-white">{leader.name}</h3>
-              <p className="text-xs font-medium text-slate-400 italic mb-4">{leader.title}</p>
-              <div className="h-px w-full bg-gradient-to-r from-neonBlue/50 to-transparent mb-4" />
-              <p className="text-[14px] leading-relaxed text-slate-300 italic">
-                &ldquo;{leader.message}&rdquo;
+            <div className="relative flex flex-col flex-grow">
+              <span className="text-xs uppercase tracking-[0.3em] text-neonBlue font-bold mb-2">{member.role}</span>
+              <h3 className="text-2xl font-bold text-white mb-4">{member.name}</h3>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-3 text-slate-400 text-sm hover:text-white transition-colors">
+                  <Phone size={16} className="text-neonBlue" />
+                  <span>{member.contact}</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-400 text-sm hover:text-white transition-colors">
+                  <Mail size={16} className="text-neonBlue" />
+                  <span>{member.email}</span>
+                </div>
+              </div>
+
+              <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                <p className="text-xs text-slate-400 italic max-w-[70%]">{member.bio}</p>
+                <a 
+                  href={member.linkedin} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-neonBlue hover:text-slateDeep transition-all"
+                >
+                  <Linkedin size={18} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  return (
+    <section id="faq" className="section-shell py-20 bg-slateDeep/30">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+            Common <span className="text-neonBlue">Questions</span>
+          </h2>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div 
+              key={index}
+              className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full p-8 flex items-center justify-between text-left"
+              >
+                <span className="text-xl font-bold text-white">{faq.question}</span>
+                <ChevronDown className={`text-neonBlue transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
+              </button>
+              
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-8 pb-8 text-slate-400 leading-relaxed text-lg border-t border-white/5 pt-4">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Testimonials() {
+  return (
+    <section id="testimonials" className="section-shell py-20 relative">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
+          Client <span className="text-neonBlue">Feedback</span>
+        </h2>
+        <p className="mt-4 text-slate-400 italic">&ldquo;Professional landscape of business transformation success stories.&rdquo;</p>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        {professionalTestimonials.map((t, index) => (
+          <motion.div
+            key={t.name}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center gap-8 p-10 rounded-[3rem] border border-white/10 bg-gradient-to-r from-white/10 to-transparent backdrop-blur-2xl group hover:border-neonBlue/30 transition-all duration-500"
+          >
+            <div className="relative h-24 w-24 md:h-32 md:w-32 flex-shrink-0 rounded-[2rem] overflow-hidden border-2 border-neonBlue/20">
+              <Image
+                src={t.image}
+                alt={t.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+            
+            <div className="flex-1 text-center md:text-left">
+              <div className="flex justify-center md:justify-start gap-1 mb-4">
+                {Array.from({ length: t.rating }).map((_, i) => (
+                  <Star key={i} size={16} className="fill-neonBlue text-neonBlue" />
+                ))}
+              </div>
+              <p className="text-xl md:text-2xl text-slate-200 font-medium italic mb-6 leading-relaxed">
+                &ldquo;{t.text}&rdquo;
               </p>
+              <div>
+                <h4 className="text-white font-bold text-lg">{t.name}</h4>
+                <p className="text-neonBlue text-sm font-bold uppercase tracking-widest">{t.role}</p>
+              </div>
             </div>
           </motion.div>
         ))}
@@ -188,9 +321,9 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="section-shell py-10 relative overflow-hidden">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
+    <section id="services" className="section-shell py-20 relative overflow-hidden">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
           Our <span className="text-neonBlue">Core</span> Expertise
         </h2>
         <p className="mt-4 text-slate-400 max-w-2xl mx-auto italic">
@@ -235,7 +368,7 @@ export function Services() {
   );
 }
 
-export function CompletedProjects({ projects }: { projects: ProjectCard[] }) {
+export function CompletedProjects({ projects: _projects }: { projects: ProjectCard[] }) {
   const completedData = [
     {
       id: "fb-poster",
@@ -287,12 +420,10 @@ export function CompletedProjects({ projects }: { projects: ProjectCard[] }) {
     }
   ];
 
-  console.log("Projects data:", projects);
-
   return (
-    <section id="projects" className="section-shell py-10 relative">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
+    <section id="projects" className="section-shell py-20 relative">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
           Completed <span className="text-neonBlue">Projects</span>
         </h2>
         <p className="mt-4 text-slate-400 max-w-2xl mx-auto italic">
@@ -333,104 +464,6 @@ export function CompletedProjects({ projects }: { projects: ProjectCard[] }) {
               </span>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export function Team({ team }: TeamProps) {
-  const placeholders = Array.from({ length: 6 }, (_, i) => ({
-    id: `dev-${i + 1}`,
-    name: `Developer ${i + 1}`,
-    role: "Developer",
-    bio: "Portfolio card placeholder",
-    githubUrl: "https://github.com",
-    linkedinUrl: "https://linkedin.com",
-    portfolioUrl: "https://example.com"
-  }));
-  
-  // Added optional chaining for safety
-  const data = [...(team || []), ...placeholders].slice(0, 6);
-
-  return (
-    <section id="team" className="section-shell py-14">
-      <h2 className="text-3xl font-semibold text-white">Our Team</h2>
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {data.map((dev) => (
-          <div key={dev.id} className="rounded-2xl border border-white/15 bg-white/5 p-5">
-            <div className="h-44 rounded-xl border border-dashed border-white/20 bg-slate-900/70" />
-            <h3 className="mt-4 font-medium text-white">{dev.name}</h3>
-            <p className="text-xs text-neonBlue">{dev.role}</p>
-            <p className="mt-1 text-sm text-slate-300">{dev.bio}</p>
-            <div className="mt-3 flex items-center gap-2 text-slate-300">
-              {dev.linkedinUrl && (
-                <a href={dev.linkedinUrl} target="_blank" rel="noreferrer">
-                  <Linkedin size={16} />
-                </a>
-              )}
-              {dev.githubUrl && (
-                <a href={dev.githubUrl} target="_blank" rel="noreferrer">
-                  <Github size={16} />
-                </a>
-              )}
-              {dev.portfolioUrl && (
-                <a href={dev.portfolioUrl} target="_blank" rel="noreferrer">
-                  <ExternalLink size={16} />
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export function Testimonials() {
-  const testimonialsData = [
-    { text: "SM Technology shipped our AI funnel in record time. Their automation logic is flawless.", role: "COO, Retail Group", rating: 5, date: "3 month ago" },
-    { text: "The LinkedIn Hunter tool they built for us has completely transformed our B2B lead generation process.", role: "Manager Operations, Global Outreach", rating: 5, date: "1 month ago" },
-    { text: "Exceptional work on our School ERP. The AI integration for student queries is saving us 20+ hours weekly.", role: "Principal, Uswa Group of Colleges", rating: 5, date: "3 days ago" },
-    { text: "Professional, fast, and very technical. They don't just code; they build business solutions.", role: "CEO, TechLaunch Solutions", rating: 5, date: "Just now" },
-    { text: "Our WhatsApp sales bot is closing deals even while we sleep. SM Tech is the best in the business.", role: "Director Marketing, Innovate Pro", rating: 5, date: "2 month ago" },
-    { text: "Highly secure and scalable E-commerce architecture. Their dashboard is world-class.", role: "Owner, Bukhari Retail Group", rating: 5, date: "2 weeks ago" }
-  ];
-
-  return (
-    <section id="testimonials" className="section-shell py-10 bg-transparent">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
-          Client <span className="text-neonBlue">Feedback</span>
-        </h2>
-        <p className="mt-4 text-slate-400 italic">&ldquo;Real stories from businesses we&apos;ve transformed.&rdquo;</p>
-      </div>
-
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {testimonialsData.map((t, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="relative rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md hover:bg-white/[0.08] transition-all duration-300 group"
-          >
-            <Quote className="absolute top-6 right-8 text-white/5 group-hover:text-neonBlue/20 transition-colors" size={40} />
-            <div className="flex gap-1 mb-4 text-yellow-500">
-              {Array.from({ length: t.rating }).map((_, idx) => (
-                <Star key={idx} size={14} fill="currentColor" />
-              ))}
-            </div>
-            <p className="text-[15px] leading-relaxed text-slate-200 italic mb-6">&ldquo;{t.text}&rdquo;</p>
-            <div className="pt-6 border-t border-white/10 flex justify-between items-center">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-neonBlue">{t.role}</p>
-                <p className="text-[10px] text-slate-500 mt-1 uppercase">{t.date}</p>
-              </div>
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-neonBlue/20 to-purple-500/20 border border-white/10" />
-            </div>
-          </motion.div>
         ))}
       </div>
     </section>
