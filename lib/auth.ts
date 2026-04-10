@@ -20,18 +20,18 @@ export const authOptions: NextAuthOptions = {
           email: credentials.email,
           name: "Placeholder User",
           role: "DEVELOPER"
-        } as any;
+        };
       }
     })
   ],
   callbacks: {
     async jwt({ token, user }) {
-      if (user) token.role = (user as any).role ?? "DEVELOPER";
+      if (user) token.role = user.role ?? "DEVELOPER";
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as any).role = token.role as string;
+        session.user.role = token.role as string;
       }
       return session;
     }

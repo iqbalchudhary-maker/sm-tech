@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ExternalLink, Github, Linkedin, Star, Target, Rocket, Quote } from "lucide-react";
 import type { ProjectCard, TeamCard } from "@/lib/site-data";
 
@@ -114,11 +115,12 @@ export function Management() {
             viewport={{ once: true }}
             className="flex flex-col h-full rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/10 to-transparent p-6 hover:border-neonBlue/40 transition-all duration-500 group"
           >
-            <div className="aspect-square w-full overflow-hidden rounded-[1.5rem] border border-white/20 bg-slate-900 shadow-2xl">
-              <img
+            <div className="aspect-square w-full overflow-hidden rounded-[1.5rem] border border-white/20 bg-slate-900 shadow-2xl relative">
+              <Image
                 src={leader.image}
                 alt={leader.name}
-                className="h-full w-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                fill
+                className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                 style={{ objectPosition: leader.imagePosition }}
               />
             </div>
@@ -210,10 +212,12 @@ export function Services() {
             
             <div className="relative z-10">
               <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-900/50 border border-white/10 group-hover:scale-110 transition-transform duration-500 p-2 shadow-inner">
-                <img 
+                <Image 
                   src={service.image} 
                   alt={service.title}
-                  className="h-16 w-16 object-contain"
+                  width={64}
+                  height={64}
+                  className="object-contain"
                 />
               </div>
 
@@ -231,7 +235,7 @@ export function Services() {
   );
 }
 
-export function CompletedProjects({ projects: _projects }: { projects: ProjectCard[] }) {
+export function CompletedProjects({ projects }: { projects: ProjectCard[] }) {
   const completedData = [
     {
       id: "fb-poster",
@@ -283,6 +287,8 @@ export function CompletedProjects({ projects: _projects }: { projects: ProjectCa
     }
   ];
 
+  console.log("Projects data:", projects);
+
   return (
     <section id="projects" className="section-shell py-10 relative">
       <div className="text-center mb-8">
@@ -301,10 +307,12 @@ export function CompletedProjects({ projects: _projects }: { projects: ProjectCa
             className="group relative flex flex-col rounded-[2rem] border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-neonBlue/30 hover:bg-white/[0.07] hover:-translate-y-2"
           >
             <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-900/50 border border-white/10 group-hover:scale-110 transition-transform duration-500 p-2 shadow-inner">
-              <img 
+              <Image 
                 src={project.image} 
                 alt={project.title}
-                className="h-14 w-14 object-contain"
+                width={56}
+                height={56}
+                className="object-contain"
               />
             </div>
 

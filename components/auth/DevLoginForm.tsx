@@ -25,7 +25,8 @@ export function DevLoginForm() {
         setError(data.error ?? "Login failed.");
         return;
       }
-      router.push(data.redirectTo ?? "/developer");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      router.push((data.redirectTo ?? "/developer") as any);
       router.refresh();
     } catch {
       setError("Network error. Please try again.");
