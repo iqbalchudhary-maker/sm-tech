@@ -18,20 +18,20 @@ const fadeIn = {
 
 export function AboutUs() {
   return (
-    <section id="about" className="section-shell py-20 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-neonBlue/5 blur-[120px] pointer-events-none" />
+    <section id="about" className="section-shell py-20 relative overflow-hidden bg-white">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-indigo-50/40 blur-[120px] pointer-events-none" />
       
       <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
         <motion.div {...fadeIn}>
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
-            About <span className="text-neonBlue">SM Technology</span>
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8 tracking-tighter">
+            About <span className="text-indigo-600">SM Technology</span>
           </h2>
-          <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
+          <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
             <p>
-              SM Technology is a premier <span className="text-white font-bold">AI Automation Company</span> and <span className="text-white font-bold">Web Development</span> firm dedicated to driving <span className="text-neonBlue font-bold">Digital Transformation</span> for businesses globally. We specialize in architecting <span className="text-white font-bold">Enterprise AI Solutions</span> and <span className="text-white font-bold">Custom SaaS</span> products that redefine operational efficiency.
+              SM Technology is a premier <span className="text-slate-900 font-bold">AI Automation Company</span> and <span className="text-slate-900 font-bold">Web Development</span> firm dedicated to driving <span className="text-indigo-600 font-bold">Digital Transformation</span> for businesses globally. We specialize in architecting <span className="text-slate-900 font-bold">Enterprise AI Solutions</span> and <span className="text-slate-900 font-bold">Custom SaaS</span> products that redefine operational efficiency.
             </p>
             <p>
-              Our journey is rooted in professional excellence and legal compliance. <span className="text-neonBlue font-semibold italic">Registration No. 2747, Registered on 3 December 2019, according to Partnership Act 1932.</span> This foundation allows us to provide high-trust engineering and reliable automation services to our international clientele.
+              Our journey is rooted in professional excellence and legal compliance. <span className="text-indigo-600 font-semibold italic">Registration No. 2747, Registered on 3 December 2019, according to Partnership Act 1932.</span> This foundation allows us to provide high-trust engineering and reliable automation services to our international clientele.
             </p>
             <p>
               Whether it&apos;s building autonomous reasoning agents or scaling omnichannel AI bots, our mission is to empower enterprises with resilient technology that eliminates repetitive manual tasks, allowing human talent to focus on high-impact growth.
@@ -41,25 +41,25 @@ export function AboutUs() {
 
         <motion.div 
           {...fadeIn}
-          className="relative aspect-square rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-3xl overflow-hidden p-8"
+          className="relative aspect-square rounded-[3rem] border border-indigo-100 bg-white shadow-premium overflow-hidden p-8"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-neonBlue/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-transparent" />
           <div className="relative h-full flex flex-col justify-center items-center text-center space-y-8">
-            <div className="h-24 w-24 rounded-3xl bg-neonBlue/10 flex items-center justify-center border border-neonBlue/20">
-              <Shield className="text-neonBlue w-12 h-12" />
+            <div className="h-24 w-24 rounded-3xl bg-indigo-50 flex items-center justify-center border border-indigo-100">
+              <Shield className="text-indigo-600 w-12 h-12" />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-2">Registered & Trusted</h3>
-              <p className="text-slate-400">Operating under the Partnership Act 1932 since 2019, delivering quality and security in every line of code.</p>
+              <h3 className="text-3xl font-bold text-slate-900 mb-2">Registered & Trusted</h3>
+              <p className="text-slate-500 font-medium">Operating under the Partnership Act 1932 since 2019, delivering quality and security in every line of code.</p>
             </div>
             <div className="grid grid-cols-2 gap-4 w-full">
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                <div className="text-2xl font-black text-neonBlue">5+ Years</div>
-                <div className="text-xs text-slate-400 uppercase tracking-widest">Experience</div>
+              <div className="p-4 rounded-2xl bg-indigo-50/30 border border-indigo-100">
+                <div className="text-2xl font-black text-indigo-600">5+ Years</div>
+                <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">Experience</div>
               </div>
-              <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                <div className="text-2xl font-black text-neonBlue">100+</div>
-                <div className="text-xs text-slate-400 uppercase tracking-widest">Global Projects</div>
+              <div className="p-4 rounded-2xl bg-indigo-50/30 border border-indigo-100">
+                <div className="text-2xl font-black text-indigo-600">100+</div>
+                <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">Global Projects</div>
               </div>
             </div>
           </div>
@@ -78,12 +78,12 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section className="section-shell py-20 bg-slateDeep/30 relative">
+    <section className="section-shell py-20 bg-surfaceSub relative">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter">
-          Why <span className="text-neonBlue">Choose</span> Us?
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">
+          Why <span className="text-indigo-600">Choose</span> Us?
         </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto italic">
+        <p className="mt-4 text-slate-600 max-w-2xl mx-auto italic font-medium">
           Delivering 100% Customer Satisfaction through intelligent, scalable, and secure technology.
         </p>
       </div>
@@ -96,13 +96,13 @@ export function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group p-8 rounded-[2.5rem] border border-white/10 bg-white/5 backdrop-blur-xl hover:border-neonBlue/40 transition-all duration-500"
+            className="group p-8 rounded-[2.5rem] border border-slate-100 bg-white hover:border-indigo-200 hover:shadow-floating transition-all duration-500"
           >
-            <div className="h-14 w-14 rounded-2xl bg-neonBlue/10 flex items-center justify-center border border-neonBlue/20 mb-6 group-hover:scale-110 transition-transform">
-              <item.icon className="text-neonBlue w-7 h-7" />
+            <div className="h-14 w-14 rounded-2xl bg-indigo-50 flex items-center justify-center border border-indigo-100 mb-6 group-hover:scale-110 transition-transform">
+              <item.icon className="text-indigo-600 w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-            <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+            <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
+            <p className="text-slate-600 text-sm leading-relaxed font-medium">{item.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -112,12 +112,12 @@ export function WhyChooseUs() {
 
 export function Management() {
   return (
-    <section id="management" className="section-shell py-20 bg-slate-50">
+    <section id="management" className="section-shell py-20 bg-white">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase">
-          Management <span className="text-blue-600">Team</span>
+          Management <span className="text-indigo-600">Team</span>
         </h2>
-        <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-slate-600 max-w-2xl mx-auto font-medium">
           Expert minds leading our global AI Automation and Digital Transformation initiatives.
         </p>
       </div>
@@ -130,9 +130,9 @@ export function Management() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative flex flex-col h-full rounded-[3rem] border border-slate-200 bg-white p-8 hover:border-blue-300 hover:shadow-premium transition-all duration-500 overflow-hidden"
+            className="group relative flex flex-col h-full rounded-[3rem] border border-slate-200 bg-white p-8 hover:border-indigo-300 hover:shadow-floating transition-all duration-500 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             
             <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-xl mb-8">
               <Image
@@ -144,17 +144,17 @@ export function Management() {
             </div>
 
             <div className="relative flex flex-col flex-grow text-center">
-              <span className="text-xs uppercase tracking-[0.3em] text-blue-600 font-bold mb-2">{member.role}</span>
+              <span className="text-xs uppercase tracking-[0.3em] text-indigo-600 font-bold mb-2">{member.role}</span>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">{member.name}</h3>
               
-              <div className="bg-blue-50/50 p-4 rounded-2xl border border-blue-100 mb-6">
-                <p className="text-sm text-slate-700 leading-relaxed font-medium">
+              <div className="bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100 mb-6">
+                <p className="text-sm text-slate-700 leading-relaxed font-bold italic">
                   &ldquo;{member.message}&rdquo;
                 </p>
               </div>
 
               <div className="mt-auto pt-6 border-t border-slate-100">
-                <p className="text-xs text-slate-500 italic">
+                <p className="text-xs text-slate-500 italic font-medium">
                   {member.bio}
                 </p>
               </div>
@@ -170,11 +170,11 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-shell py-20 bg-slateDeep/30">
+    <section id="faq" className="section-shell py-20 bg-surfaceSub">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
-            Common <span className="text-neonBlue">Questions</span>
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase">
+            Common <span className="text-indigo-600">Questions</span>
           </h2>
         </div>
 
@@ -182,14 +182,14 @@ export function FAQSection() {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden transition-all"
+              className="rounded-[2rem] border border-slate-200 bg-white overflow-hidden transition-all hover:border-indigo-200 shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full p-8 flex items-center justify-between text-left"
               >
-                <span className="text-xl font-bold text-white">{faq.question}</span>
-                <ChevronDown className={`text-neonBlue transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
+                <span className="text-xl font-bold text-slate-900">{faq.question}</span>
+                <ChevronDown className={`text-indigo-600 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
               </button>
               
               <AnimatePresence>
@@ -200,7 +200,7 @@ export function FAQSection() {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-8 text-slate-400 leading-relaxed text-lg border-t border-white/5 pt-4">
+                    <div className="px-8 pb-8 text-slate-600 leading-relaxed text-lg border-t border-slate-200 pt-4 font-medium">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -216,12 +216,12 @@ export function FAQSection() {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="section-shell py-20 relative">
+    <section id="testimonials" className="section-shell py-20 relative bg-white">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase">
-          Client <span className="text-neonBlue">Feedback</span>
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase">
+          Client <span className="text-indigo-600">Feedback</span>
         </h2>
-        <p className="mt-4 text-slate-400 italic">&ldquo;Professional landscape of business transformation success stories.&rdquo;</p>
+        <p className="mt-4 text-slate-600 italic font-medium">&ldquo;Professional landscape of business transformation success stories.&rdquo;</p>
       </div>
 
       <div className="flex flex-col gap-8">
@@ -231,9 +231,9 @@ export function Testimonials() {
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row items-center gap-8 p-10 rounded-[3rem] border border-white/10 bg-gradient-to-r from-white/10 to-transparent backdrop-blur-2xl group hover:border-neonBlue/30 transition-all duration-500"
+            className="flex flex-col md:flex-row items-center gap-8 p-10 rounded-[3rem] border border-slate-200 bg-white group hover:border-indigo-300 hover:shadow-premium transition-all duration-500"
           >
-            <div className="relative h-24 w-24 md:h-32 md:w-32 flex-shrink-0 rounded-[2rem] overflow-hidden border-2 border-neonBlue/20">
+            <div className="relative h-24 w-24 md:h-32 md:w-32 flex-shrink-0 rounded-[2rem] overflow-hidden border-2 border-indigo-100 shadow-lg">
               <Image
                 src={t.image}
                 alt={t.name}
@@ -245,15 +245,15 @@ export function Testimonials() {
             <div className="flex-1 text-center md:text-left">
               <div className="flex justify-center md:justify-start gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} size={16} className="fill-neonBlue text-neonBlue" />
+                  <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-xl md:text-2xl text-slate-200 font-medium italic mb-6 leading-relaxed">
+              <p className="text-xl md:text-2xl text-slate-700 font-bold italic mb-6 leading-relaxed">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div>
-                <h4 className="text-white font-bold text-lg">{t.name}</h4>
-                <p className="text-neonBlue text-sm font-bold uppercase tracking-widest">{t.role}</p>
+                <h4 className="text-slate-900 font-bold text-lg">{t.name}</h4>
+                <p className="text-indigo-600 text-sm font-bold uppercase tracking-widest">{t.role}</p>
               </div>
             </div>
           </motion.div>
@@ -269,53 +269,53 @@ export function Services() {
       title: "Autonomous Reasoning Agents",
       desc: "AI agents that think and execute complex business logic independently to save your time.",
       image: "https://cdn-icons-png.flaticon.com/512/4712/4712035.png",
-      color: "group-hover:border-cyan-500/50",
-      glow: "bg-cyan-500/10"
+      color: "group-hover:border-indigo-200",
+      glow: "bg-indigo-50"
     },
     {
       title: "Workflow Automation",
       desc: "Connecting tools like n8n and Make for 24/7 automated systems that boost efficiency.",
       image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png",
-      color: "group-hover:border-amber-500/50",
-      glow: "bg-amber-500/10"
+      color: "group-hover:border-amber-200",
+      glow: "bg-amber-50"
     },
     {
       title: "Enterprise RAG Systems",
       desc: "Private AI brains trained on your company documents for secure and instant knowledge retrieval.",
       image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked%20with%20Key.png",
-      color: "group-hover:border-purple-500/50",
-      glow: "bg-purple-500/10"
+      color: "group-hover:border-purple-200",
+      glow: "bg-purple-50"
     },
     {
       title: "Omni-Channel AI Bots",
       desc: "WhatsApp and Social Media bots that engage customers and close sales automatically.",
       image: "https://cdn-icons-png.flaticon.com/512/5968/5968841.png",
-      color: "group-hover:border-green-500/50",
-      glow: "bg-green-500/10"
+      color: "group-hover:border-emerald-200",
+      glow: "bg-emerald-50"
     },
     {
       title: "Custom AI Dashboards",
       desc: "Full-stack portals to monitor your AI agents and visualize business growth metrics.",
       image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png",
-      color: "group-hover:border-rose-500/50",
-      glow: "bg-rose-500/10"
+      color: "group-hover:border-rose-200",
+      glow: "bg-rose-50"
     },
     {
       title: "AI Voice Automation",
       desc: "Human-like voice agents for customer support and automated calling to scale outreach.",
       image: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Microphone.png",
-      color: "group-hover:border-indigo-500/50",
-      glow: "bg-indigo-500/10"
+      color: "group-hover:border-violet-200",
+      glow: "bg-violet-50"
     }
   ];
 
   return (
-    <section id="services" className="section-shell py-20 relative overflow-hidden">
+    <section id="services" className="section-shell py-20 relative overflow-hidden bg-white">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
-          Our <span className="text-neonBlue">Core</span> Expertise
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter">
+          Our <span className="text-indigo-600">Core</span> Expertise
         </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto italic">
+        <p className="mt-4 text-slate-600 max-w-2xl mx-auto italic font-medium">
           &ldquo;We build intelligent systems that increase your sales and streamline your business operations.&rdquo;
         </p>
       </div>
@@ -328,12 +328,12 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
-            className={`group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-500 ${service.color} hover:-translate-y-2`}
+            className={`group relative overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-8 hover:border-indigo-200 transition-all duration-500 ${service.color} hover:-translate-y-2 hover:shadow-floating`}
           >
             <div className={`absolute -right-10 -top-10 h-32 w-32 rounded-full ${service.glow} blur-3xl opacity-0 group-hover:opacity-100 transition-opacity`} />
             
             <div className="relative z-10">
-              <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-900/50 border border-white/10 group-hover:scale-110 transition-transform duration-500 p-2 shadow-inner">
+              <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white border border-slate-100 group-hover:scale-110 transition-transform duration-500 p-2 shadow-sm">
                 <Image 
                   src={service.image} 
                   alt={service.title}
@@ -343,10 +343,10 @@ export function Services() {
                 />
               </div>
 
-              <h3 className="text-xl font-bold text-white group-hover:text-neonBlue transition-colors">
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                 {service.title}
               </h3>
-              <p className="mt-4 text-[15px] leading-relaxed text-slate-400 group-hover:text-slate-200">
+              <p className="mt-4 text-[15px] leading-relaxed text-slate-600 group-hover:text-slate-800 font-medium">
                 {service.desc}
               </p>
             </div>
@@ -410,12 +410,12 @@ export function CompletedProjects({ projects: _projects }: { projects: ProjectCa
   ];
 
   return (
-    <section id="projects" className="section-shell py-20 relative">
+    <section id="projects" className="section-shell py-20 relative bg-surfaceSub">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
-          Completed <span className="text-neonBlue">Projects</span>
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter">
+          Completed <span className="text-indigo-600">Projects</span>
         </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto italic">
+        <p className="mt-4 text-slate-600 max-w-2xl mx-auto italic font-medium">
           Alhamdulillah, we have successfully deployed **more than 100+ projects**. Here are a few featured samples of our work.
         </p>
       </div>
@@ -424,9 +424,9 @@ export function CompletedProjects({ projects: _projects }: { projects: ProjectCa
         {completedData.map((project) => (
           <div 
             key={project.id} 
-            className="group relative flex flex-col rounded-[2rem] border border-white/10 bg-white/5 p-8 transition-all duration-500 hover:border-neonBlue/30 hover:bg-white/[0.07] hover:-translate-y-2"
+            className="group relative flex flex-col rounded-[2rem] border border-slate-200 bg-white p-8 transition-all duration-500 hover:border-indigo-300 hover:shadow-floating hover:-translate-y-2"
           >
-            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-900/50 border border-white/10 group-hover:scale-110 transition-transform duration-500 p-2 shadow-inner">
+            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-indigo-50/50 border border-indigo-100 group-hover:scale-110 transition-transform duration-500 p-2 shadow-inner">
               <Image 
                 src={project.image} 
                 alt={project.title}
@@ -436,19 +436,19 @@ export function CompletedProjects({ projects: _projects }: { projects: ProjectCa
               />
             </div>
 
-            <h3 className="text-xl font-bold text-white group-hover:text-neonBlue transition-colors italic">
+            <h3 className="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors italic">
               {project.title}
             </h3>
             
-            <p className="mt-3 text-[14px] leading-relaxed text-slate-400 mb-6">
+            <p className="mt-3 text-[14px] leading-relaxed text-slate-600 mb-6 font-medium">
               {project.description}
             </p>
 
-            <div className="mt-auto pt-6 border-t border-white/5">
-              <p className="text-xs italic text-slate-300 mb-2">
+            <div className="mt-auto pt-6 border-t border-slate-100">
+              <p className="text-xs italic text-slate-500 mb-2 font-medium">
                 &ldquo;{project.testimonial}&rdquo;
               </p>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-neonBlue/80">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-indigo-600">
                 — {project.role}
               </span>
             </div>

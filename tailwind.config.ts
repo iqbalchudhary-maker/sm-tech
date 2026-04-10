@@ -9,19 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        slateDeep: "#f8fafc",
-        neonBlue: "#0ea5e9",
-        electricViolet: "#8b5cf6",
-        brandPrimary: "#2563eb",
-        brandSecondary: "#4f46e5",
+        slateDeep: "#ffffff",
+        neonBlue: "#4f46e5",
+        electricViolet: "#7c3aed",
+        brandPrimary: "#4f46e5",
+        brandSecondary: "#7c3aed",
+        brandSuccess: "#10b981",
+        brandRose: "#f43f5e",
         textMain: "#0f172a",
         textMuted: "#475569",
-        borderLight: "#e2e8f0"
+        borderLight: "#e2e8f0",
+        surfaceSub: "#f8fafc"
       },
       boxShadow: {
-        glow: "0 0 30px rgba(14, 165, 233, 0.1)",
-        violet: "0 0 30px rgba(139, 92, 246, 0.1)",
-        premium: "0 10px 40px -10px rgba(0, 0, 0, 0.05)"
+        glow: "0 0 40px rgba(79, 70, 229, 0.08)",
+        violet: "0 0 40px rgba(124, 58, 237, 0.08)",
+        premium: "0 10px 50px -12px rgba(0, 0, 0, 0.08)",
+        floating: "0 20px 60px -15px rgba(79, 70, 229, 0.12)"
       }
     }
   },

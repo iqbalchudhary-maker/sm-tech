@@ -12,17 +12,17 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-xl">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-blue-50/20 via-transparent to-indigo-50/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-indigo-50/20 via-transparent to-violet-50/20" />
 
       <div className="section-shell relative flex h-20 items-center justify-between">
         <div className="shrink-0 leading-tight">
           <div className="flex items-center gap-2">
-            <p className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-xl font-black tracking-tighter text-transparent uppercase">
+            <p className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-xl font-black tracking-tighter text-transparent uppercase">
               SM Technology
             </p>
             <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-70" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-blue-500" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-70" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-indigo-500" />
             </span>
           </div>
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">AI Automation Agency</p>
@@ -33,10 +33,10 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="group relative text-sm font-semibold text-slate-600 transition-all duration-300 hover:text-blue-600"
+              className="group relative text-sm font-semibold text-slate-600 transition-all duration-300 hover:text-indigo-600"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-indigo-600 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
@@ -44,7 +44,7 @@ export function Navbar() {
         <div className="hidden items-center gap-4 lg:flex">
           <Link
             href="/auth/login"
-            className="text-xs font-bold text-slate-600 hover:text-blue-600 transition-colors"
+            className="text-xs font-bold text-slate-600 hover:text-indigo-600 transition-colors"
           >
             Login
           </Link>
@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="relative">
             <button
               onClick={() => setOpen((v) => !v)}
-              className="flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-xs font-bold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg"
+              className="flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-xs font-bold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg"
             >
               Contact Us <ChevronDown size={14} className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
             </button>
@@ -76,7 +76,7 @@ export function Navbar() {
                     href="https://wa.me/923010637955"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:text-blue-600"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:text-indigo-600"
                   >
                     <span className="text-lg">🇵🇰</span> Pakistan Office
                   </a>
@@ -84,7 +84,7 @@ export function Navbar() {
                     href="https://wa.me/971558245432"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:text-blue-600"
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:text-indigo-600"
                   >
                     <span className="text-lg">🇦🇪</span> UAE Office
                   </a>
@@ -118,7 +118,7 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-lg font-bold text-slate-700 hover:text-blue-600"
+                  className="block text-lg font-bold text-slate-700 hover:text-indigo-600"
                 >
                   {item.label}
                 </a>
@@ -138,7 +138,7 @@ export function Navbar() {
                 </Link>
                 <a
                   href="https://wa.me/923010637955"
-                  className="flex h-12 items-center justify-center rounded-xl bg-blue-600 font-bold text-white"
+                  className="flex h-12 items-center justify-center rounded-xl bg-indigo-600 font-bold text-white"
                 >
                   Contact Pakistan
                 </a>

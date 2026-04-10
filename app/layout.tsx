@@ -29,7 +29,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-slate-900 antialiased">{children}</body>
+      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-700">{children}</body>
     </html>
   );
 }
